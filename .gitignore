@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.DS_Store
+.idea/*
+# Cursive Clojure plugin
+.idea/modules.xml

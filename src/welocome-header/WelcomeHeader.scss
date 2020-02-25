@@ -1,0 +1,31 @@
+.burgers-background {
+  background: url('/main-background.png') no-repeat center;
+  width: 100%;
+  height: 100%;
+}
+
+.promotion-info{
+  background: url('/group-1389.png') no-repeat;
+  background-size: contain;
+  width: 650px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+}
+
+.order-button {
+  width: 255px;
+  height: 67px;
+  border: none;
+  background: #FFAA00;
+  border-radius: 90px;
+}
+
+.section-separator{
+  background: url("/section-separator.png") no-repeat center;
+  width: 100%;
+  height: 55px;
+  background-size: contain;
+  position: relative;
+  top: 25px;
+}

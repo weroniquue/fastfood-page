@@ -1,0 +1,16 @@
+.icon {
+  height: 100px;
+}
+
+.food-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 175px;
+  &:hover{
+    box-shadow: 0 15px 15px #00000012;
+    border-radius: 5px;
+  }
+}

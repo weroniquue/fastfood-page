@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+}
+
+.logo {
+  background: url('/logo.png') no-repeat;
+  background-size: contain;
+  height: 150px;
+  width: 200px;
+  margin-top: 40px;
+  margin-left: 4em;
+}
+
+.navbar-menu {
+  width: 56vw;
+  height: 110px;
+  background: rgba(40, 25, 35, 0.61) 0 0 no-repeat padding-box;
+  display: flex;
+  margin-left: auto;
+}
+
+.navbar-navigation {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  > a {
+    color: #FFFFFF;
+    border-top: 4px solid #FFAA00;
+  }
+}
+
+.navbar-actions {
+  background: #A80E0E 0 0 no-repeat padding-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+
+  > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .search-icon{
+    background-image: url('/search.png');
+  }
+
+  .profile-icon{
+    background-image: url('/profile.png');
+  }
+
+  .basket-icon{
+    background-image: url('/search.png');
+  }
+}
+

@@ -1,0 +1,25 @@
+.food-tiles{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 70px 0;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: #A80E0E;
+    font-size: 3em;
+
+    &:after {
+      content: '';
+      width: 370px;
+      height: 14px;
+      display: block;
+      background: url("/brush.png") no-repeat center;
+    }
+  }
+}
