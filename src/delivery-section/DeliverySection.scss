@@ -1,0 +1,20 @@
+.deliver-section {
+  background-color: #FFAA00;
+}
+
+.delivery-info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pizza-maker{
+  width: 600px;
+  height: 600px;
+  display: block;
+}
+
+.delivery-details{
+  display: flex;
+  flex-direction: column;
+}

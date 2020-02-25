@@ -1,6 +1,7 @@
 import React from 'react';
 import './WelcomeHeader.scss'
 import Menu from "../menu/Menu";
+import SectionSeparator from "../section-separator/SectionSeparator";
 
 class WelcomeHeader extends React.Component {
 	render() {
@@ -12,7 +13,7 @@ class WelcomeHeader extends React.Component {
 						<div>Buy any 2 burgers and get 1.5L Pepsi Free</div>
 					</div>
 					<button className={'order-button'}>Order now</button>
-					<div className={'section-separator'}></div>
+					<SectionSeparator topSeparator={true}/>
 				</div>
 		);
 	}
