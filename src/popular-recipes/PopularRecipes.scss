@@ -1,0 +1,8 @@
+@import "../styles/typography.scss";
+
+.popular-recipes {
+
+  h1 {
+    @include h1-with-decoration;
+  }
+}

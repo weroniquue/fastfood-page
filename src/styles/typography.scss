@@ -1,0 +1,12 @@
+@mixin h1-with-decoration {
+    color: #A80E0E;
+    font-size: 3em;
+
+    &:after {
+      content: '';
+      width: 370px;
+      height: 14px;
+      display: block;
+      background: url("/brush.png") no-repeat center;
+    }
+}

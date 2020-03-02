@@ -1,6 +1,7 @@
 import React from 'react';
 import './OffersSection.scss'
 import IconTile from "../icon-tile/IconTile";
+import SectionSeparator from "../section-separator/SectionSeparator";
 
 class OffersSection extends React.Component {
 	constructor(props) {
@@ -39,6 +40,7 @@ class OffersSection extends React.Component {
 	render() {
 		return (
 				<section className={'offer'}>
+					<SectionSeparator topSeparator={true}/>
 					<h1>Want To Eat?</h1>
 					<p>Try our Most Delicious food and it usually take minutes to deliver!</p>
 					<div className={'food-tiles'}>

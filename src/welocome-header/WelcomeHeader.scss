@@ -1,7 +1,10 @@
 .burgers-background {
   background: url('/main-background.png') no-repeat center;
   width: 100%;
-  height: 100%;
+  height: 105vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .promotion-info{
@@ -19,4 +22,49 @@
   border: none;
   background: #FFAA00;
   border-radius: 90px;
+}
+
+.burgers-background h1 {
+  color: white;
+  font-size: 3em;
+}
+
+.promotion-details {
+  color: white;
+  font-size: 28px;
+  width: 50%;
+  margin: 2em
+}
+
+.header-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promotion {
+  width: 100%;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 25px;
+  height: 43px;
+  margin: 20px;
+}
+
+.left-arrow {
+  background: url('/left-arrow.png') no-repeat center;
+}
+
+.right-arrow {
+  background: url('/right-arrow.png') no-repeat center;
+}
+
+.double-arrow{
+  background: url('/double-arrow.png') no-repeat center;
+  width: 64px;
+  height: 55px;
+  margin: 0 auto 3em;
 }

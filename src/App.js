@@ -3,6 +3,7 @@ import './App.scss';
 import WelcomeHeader from "./welocome-header/WelcomeHeader";
 import OffersSection from "./offers-section/OffersSection";
 import DeliverySection from "./delivery-section/DeliverySection";
+import PopularRecipes from "./popular-recipes/PopularRecipes";
 
 class App extends React.Component {
 
@@ -12,6 +13,7 @@ class App extends React.Component {
 			        <WelcomeHeader/>
 			        <OffersSection/>
 			        <DeliverySection/>
+			        <PopularRecipes/>
 		        </div>
         );
     }

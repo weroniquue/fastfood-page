@@ -15,7 +15,6 @@ class DeliverySection extends React.Component {
 								there</p>
 						</div>
 					</div>
-					<SectionSeparator topSeparator={true}/>
 				</section>
 		);
 	}
