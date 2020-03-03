@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "https://weroniquue.github.io/fastfood-page /static/css/main.30c5d73e.chunk.css",
+    "main.js": "https://weroniquue.github.io/fastfood-page /static/js/main.c1e3bb4b.chunk.js",
+    "main.js.map": "https://weroniquue.github.io/fastfood-page /static/js/main.c1e3bb4b.chunk.js.map",
+    "runtime-main.js": "https://weroniquue.github.io/fastfood-page /static/js/runtime-main.4e3c0fb9.js",
+    "runtime-main.js.map": "https://weroniquue.github.io/fastfood-page /static/js/runtime-main.4e3c0fb9.js.map",
+    "static/js/2.546f0dd3.chunk.js": "https://weroniquue.github.io/fastfood-page /static/js/2.546f0dd3.chunk.js",
+    "static/js/2.546f0dd3.chunk.js.map": "https://weroniquue.github.io/fastfood-page /static/js/2.546f0dd3.chunk.js.map",
+    "index.html": "https://weroniquue.github.io/fastfood-page /index.html",
+    "precache-manifest.ae73f305eb9fefb1288b0a8ef277a84e.js": "https://weroniquue.github.io/fastfood-page /precache-manifest.ae73f305eb9fefb1288b0a8ef277a84e.js",
+    "service-worker.js": "https://weroniquue.github.io/fastfood-page /service-worker.js",
+    "static/css/main.30c5d73e.chunk.css.map": "https://weroniquue.github.io/fastfood-page /static/css/main.30c5d73e.chunk.css.map",
+    "static/js/2.546f0dd3.chunk.js.LICENSE.txt": "https://weroniquue.github.io/fastfood-page /static/js/2.546f0dd3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e3c0fb9.js",
+    "static/js/2.546f0dd3.chunk.js",
+    "static/css/main.30c5d73e.chunk.css",
+    "static/js/main.c1e3bb4b.chunk.js"
+  ]
+}
