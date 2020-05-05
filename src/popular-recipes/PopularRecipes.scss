@@ -1,6 +1,9 @@
 @import "../styles/typography.scss";
 
 .popular-recipes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     @include h1-with-decoration;

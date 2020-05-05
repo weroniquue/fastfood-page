@@ -1,5 +1,6 @@
 import React from 'react';
 import './Menu.scss';
+import {Link} from 'react-router-dom';
 
 class Menu extends React.Component {
 	render() {
@@ -9,8 +10,8 @@ class Menu extends React.Component {
 
 					<div className={'navbar-menu'}>
 						<div className={'navbar-navigation'}>
-							<a href='#'>Home</a>
-							<a href='#'>Menu</a>
+							<Link to="/">Home</Link>
+							<Link to="/menu">Menu</Link>
 							<a href='#'>Gallery</a>
 							<a href='#'>Testiminials</a>
 							<a href='#'>Contact us</a>

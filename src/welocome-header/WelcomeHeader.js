@@ -1,12 +1,10 @@
 import React from 'react';
 import './WelcomeHeader.scss'
-import Menu from "../menu/Menu";
 
 class WelcomeHeader extends React.Component {
 	render() {
 		return (
 				<div className={'burgers-background'}>
-					<Menu/>
 					<div className={'header-info'}>
 						<div className={'left-arrow'}/>
 						<div className={'promotion'}>
