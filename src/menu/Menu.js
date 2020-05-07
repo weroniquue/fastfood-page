@@ -12,14 +12,10 @@ class Menu extends React.Component {
 						<div className={'navbar-navigation'}>
 							<Link to="/">Home</Link>
 							<Link to="/menu">Menu</Link>
-							<a href='#'>Gallery</a>
-							<a href='#'>Testiminials</a>
-							<a href='#'>Contact us</a>
 						</div>
 						<div className={'navbar-actions'}>
-							<div className={'search-icon'}/>
-							<div className={'profile-icon'}/>
-							<div className={'basket-icon'}/>
+							<div className={'basket-icon'}>	<Link to="/cart"/></div>
+							<div className={'basket-total'} id={'total-basket'}/>
 						</div>
 					</div>
 				</div>

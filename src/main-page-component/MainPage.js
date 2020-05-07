@@ -12,7 +12,7 @@ class MainPage extends React.Component {
 					<WelcomeHeader/>
 					<OffersSection/>
 					<DeliverySection/>
-					<PopularRecipes/>
+					{/*<PopularRecipes/>*/}
 				</div>
 		);
 	}

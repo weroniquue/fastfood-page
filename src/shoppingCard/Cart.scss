@@ -1,0 +1,24 @@
+@import "../styles/typography";
+
+.cart-container {
+  margin-top: 190px;
+}
+
+.empty-basket {
+  background: url("/pizza-icon.png") no-repeat center;
+  width: 135px;
+  height: 135px;
+}
+
+.cart-details {
+  & h1 {
+    @include h1-with-decoration();
+  }
+}
+
+.empty-basket-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
