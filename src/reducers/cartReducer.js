@@ -4,39 +4,45 @@ const initState = {
 	menuItems: [
 		{
 			id: 1,
-			name: 'vvv',
-			ingredients: 'vvv',
-			price: 15.90
+			name: 'MARGHERITA',
+			ingredients: 'tomato sauce pelati, mozzarella, basil leaves',
+			price: 15.90,
+			img: '/pizza.png'
 		},
 		{
 			id: 2,
-			name: 'vvv',
-			ingredients: 'vvv',
-			price: 16.90
+			name: 'SALAME',
+			ingredients: 'tomato sauce, mozzarella, salami, salami spianata picante, peperoni',
+			price: 24.90,
+			img: '/pizza.png'
 		},
 		{
 			id: 3,
-			name: 'vvv',
-			ingredients: 'vvv',
-			price: 25.90
+			name: 'FORMAGGIO',
+			ingredients: 'tomato sauce, mozzarella, scamorza (italian smoked cheese), gorgoznola, parmesan',
+			price: 26.90,
+			img: '/pizza.png'
 		},
 		{
 			id: 4,
-			name: 'vvv',
-			ingredients: 'vvv',
-			price: 23.90
+			name: 'Hamburger',
+			ingredients: '100% beef patty with onions, pickles, mustard and a dollop of tomato ketchup, all in a soft bun.',
+			price: 15.90,
+			img: '/pizza.png'
 		},
 		{
 			id: 5,
-			name: 'vvv',
-			ingredients: 'vvv',
-			price: 21.90
+			name: 'French Fries',
+			ingredients: 'Fries cut from whole potatoes',
+			price: 5.90,
+			img: '/pizza.png'
 		},
 		{
 			id: 6,
-			name: 'vvv',
-			ingredients: 'vvv',
-			price: 14.90
+			name: 'Coca-Cola',
+			ingredients: '',
+			price: 3.90,
+			img: '/pizza.png'
 		}
 	],
 	addedItems:[],
@@ -56,7 +62,6 @@ function showTotalInCart(addedItems) {
 		element.innerText = sum.toString();
 		element.classList.add("basket-total-visible");
 	}
-
 }
 
 const cartReducer= (state = initState, action)=>{
@@ -68,6 +73,7 @@ const cartReducer= (state = initState, action)=>{
 		{
 			addedItem.quantity += 1;
 			showTotalInCart(state.addedItems);
+			console.log(typeof state.total + addedItem.price);
 			return{
 				...state,
 				total: state.total + addedItem.price

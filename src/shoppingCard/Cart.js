@@ -18,28 +18,28 @@ class Cart extends Component {
 
   render() {
     let addedItems = this.props.items.length ? (
-      <div>
+      <div className={"cart-details"}>
 	      <h1>Your cart:</h1>
 	      <div>
           {this.props.items.map((item) => {
             return (
-              <div className="collection-item avatar" key={item.id}>
-                {/*<div className="item-img">*/}
-                <img src={item.img} alt={item.img} className="" />
-                {/*</div>*/}
-
+              <div className="collection-item" key={item.id}>
+                <img src={item.img} alt={item.img} className="collection-item-img" />
                 <div className="item-desc">
-                  <h3 className="title">{item.title}</h3>
-                  <p>{item.desc}</p>
+                  <h3 className="title">{item.name}</h3>
+                  <p>{item.ingredients}</p>
                   <div>Price: {item.price}$</div>
-                  <div>Quantity: {item.quantity}</div>
-                  <div className="add-remove">
-                    <Link to="/cart">
-                      <i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}>arrow_drop_up</i>
-                    </Link>
-                    <Link to="/cart">
-                      <i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i>
-                    </Link>
+                  <div>
+	                  Quantity:
+	                  <div className="add-remove">
+		                  <Link to="/cart">
+	                      <i className="fa fa-plus-circle" onClick={()=>{this.handleAddQuantity(item.id)}}/>
+	                    </Link>
+		                  <div>{item.quantity}</div>
+	                    <Link to="/cart">
+	                      <i className="fa fa-minus-circle" onClick={()=>{this.handleSubtractQuantity(item.id)}}/>
+	                    </Link>
+	                  </div>
                   </div>
                   <button className="" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
                 </div>
@@ -47,7 +47,10 @@ class Cart extends Component {
             );
           })}
         </div>
-        <div className={"cart-summary"}>aa {this.props.totalPrice}</div>
+	      <div className={"cart-summary"}>
+	        <div className={"cart-summary-total"}>TOTAL: {this.props.totalPrice}$</div>
+		      <button>Pay</button>
+	      </div>
       </div>
     ) : (
       <div className={'empty-basket-details'}>
@@ -62,7 +65,7 @@ class Cart extends Component {
         {this.props.payment ? (
           <p>sss</p>
         ) : (
-          <div className={"cart-details"}>
+          <div>
             {addedItems}
           </div>
         )}
@@ -71,10 +74,17 @@ class Cart extends Component {
   }
 }
 
+function roundNumber(number) {
+	var newnumber = Number(number+'').toFixed(2);
+	return parseFloat(newnumber);
+}
+
+
 const mapStateToProps = (state) => {
+	console.log(state);
   return {
     items: state.addedItems,
-	  totalPrice: state.total,
+	  totalPrice: roundNumber(state.total),
     payment: false,
   };
 };

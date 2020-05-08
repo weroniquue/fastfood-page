@@ -14,7 +14,7 @@ class MenuItem extends React.Component {
 					<div>{this.props.ingredients}</div>
 					<div className={'menu-action'}>
 						<button className={'order-button small-btn'} onClick={()=>{this.handleClick(this)}}>Add to card</button>
-						<div className={'item-price'}>{this.props.price}</div>
+						<div className={'item-price'}>{this.props.price}$</div>
 					</div>
 				</div>
 		);

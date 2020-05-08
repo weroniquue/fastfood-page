@@ -2,6 +2,7 @@
 
 .cart-container {
   margin-top: 190px;
+  padding: 0 20px;
 }
 
 .empty-basket {
@@ -11,8 +12,49 @@
 }
 
 .cart-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   & h1 {
     @include h1-with-decoration();
+  }
+
+  .collection-item{
+    display: flex;
+    margin: 35px;
+  }
+
+  .collection-item-img {
+    max-width: 200px;
+  }
+
+  .add-remove {
+    display: flex;
+    i {
+      font-size: 24px;
+    }
+
+    >* {
+      margin: 5px;
+    }
+  }
+
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #a80e0e;
+    margin: 0 35px;
+  }
+
+  .cart-summary-total {
+    font-size: 32px;
+    color: #a80e0e;
+  }
+
+  .item-desc {
+    padding: 0 20px;
   }
 }
 
