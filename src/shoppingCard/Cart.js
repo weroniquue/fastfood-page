@@ -16,6 +16,18 @@ class Cart extends Component {
 		this.props.subtractQuantity(id);
 	};
 
+	handlePay = () => {
+		console.log(this.props.items);
+		console.log(this.props.total);
+
+		fetch('https://secure.snd.payu.com/pl/standard/user/oauth/authorize?grant_type=client_credentials&client_id=386261&client_secret=1cef64d1551ae3c794c53002c2c4ba90',
+				{}).then((response) => response.json())
+				.then((json) => {
+					console.log(json);
+				})
+
+	};
+
   render() {
     let addedItems = this.props.items.length ? (
       <div className={"cart-details"}>
@@ -49,7 +61,7 @@ class Cart extends Component {
         </div>
 	      <div className={"cart-summary"}>
 	        <div className={"cart-summary-total"}>TOTAL: {this.props.totalPrice}$</div>
-		      <button>Pay</button>
+		      <button onClick={() => this.handlePay()}>Pay</button>
 	      </div>
       </div>
     ) : (
@@ -81,7 +93,6 @@ function roundNumber(number) {
 
 
 const mapStateToProps = (state) => {
-	console.log(state);
   return {
     items: state.addedItems,
 	  totalPrice: roundNumber(state.total),
