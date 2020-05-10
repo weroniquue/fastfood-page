@@ -36,7 +36,7 @@ class Cart extends Component {
 			products: products
 		};
 
-		fetch('/pay', {
+		fetch('https://payment-payu-api.herokuapp.com/pay', {
 			method: 'POST',
 			headers: {
 				Authorization: 'Bearer ' + process.env.HEADER_ID,
