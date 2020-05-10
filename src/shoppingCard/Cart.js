@@ -27,7 +27,7 @@ class Cart extends Component {
 
 		const data = {
 			notifyUrl: "https://your.eshop.com/notify",
-			continueUrl: "http://localhost:3000/thankyou",
+			continueUrl: "/thankyou",
 			customerIp: "127.0.0.1",
 			merchantPosId: "386261",
 			description: "Płatność za żywność",
