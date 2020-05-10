@@ -29,7 +29,7 @@ class Cart extends Component {
 			notifyUrl: "https://your.eshop.com/notify",
 			continueUrl: "http://localhost:3000/thankyou",
 			customerIp: "127.0.0.1",
-			merchantPosId:  process.env.POS_ID,
+			merchantPosId: "386261",
 			description: "Płatność za żywność",
 			currencyCode: "PLN",
 			totalAmount: this.props.totalPrice * 100,
@@ -39,7 +39,7 @@ class Cart extends Component {
 		fetch('https://payment-payu-api.herokuapp.com/pay', {
 			method: 'POST',
 			headers: {
-				Authorization: 'Bearer ' + process.env.HEADER_ID,
+				Authorization: 'Bearer bbb36901-63a9-44e5-a42f-3aef9a53dd60',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(data)
