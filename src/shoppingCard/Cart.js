@@ -26,8 +26,7 @@ class Cart extends Component {
 		});
 
 		const data = {
-			notifyUrl: "https://your.eshop.com/notify",
-			continueUrl: "/thankyou",
+			continueUrl: "https://fast-burgers.herokuapp.com/thankyou",
 			customerIp: "127.0.0.1",
 			merchantPosId: "386261",
 			description: "Płatność za żywność",
