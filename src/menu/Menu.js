@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class Menu extends React.Component {
 	render() {
 		return (
-				<div className={'navbar'}>
+				<div className={'custom-navbar'}>
 					<div className={'logo'}/>
 
 					<div className={'navbar-menu'}>

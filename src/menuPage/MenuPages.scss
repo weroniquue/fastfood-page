@@ -2,6 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  margin-top: 190px;
+  margin: 190px auto 0;
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 500px) {
+
+
 }

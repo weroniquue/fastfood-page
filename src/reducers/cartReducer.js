@@ -1,4 +1,4 @@
-import {ADD_QUANTITY, ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY} from "../acrions/actionTypes";
+import {ADD_QUANTITY, ADD_TO_CART, REMOVE_ITEM, SHOW_SPINNER, SUB_QUANTITY} from "../acrions/actionTypes";
 
 const initState = {
 	menuItems: [
@@ -123,6 +123,12 @@ const cartReducer= (state = initState, action)=>{
 				...state,
 				total: newTotal
 			}
+		}
+	}
+	if (action.type === SHOW_SPINNER) {
+		return {
+			...state,
+			shouldShowSpinner : action.showSpinner
 		}
 	}
 	return state

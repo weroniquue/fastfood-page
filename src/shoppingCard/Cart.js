@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import "./Cart.scss";
-import {addQuantity, removeItem, subtractQuantity} from "../acrions/cartActions";
+import {addQuantity, removeItem, showSpinner, subtractQuantity} from "../acrions/cartActions";
+import Button from 'react-bootstrap/Button'
 
 class Cart extends Component {
 
@@ -17,6 +18,7 @@ class Cart extends Component {
 	};
 
 	handlePay = () => {
+		this.props.showSpinner(true);
 		const products = this.props.items.map(item => {
 			return {
 				name: item.name,
@@ -38,7 +40,6 @@ class Cart extends Component {
 		fetch('https://payment-payu-api.herokuapp.com/pay', {
 			method: 'POST',
 			headers: {
-				Authorization: 'Bearer bbb36901-63a9-44e5-a42f-3aef9a53dd60',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(data)
@@ -51,6 +52,7 @@ class Cart extends Component {
 	};
 
 	render() {
+		console.log(this.props);
 		let addedItems = this.props.items.length ? (
 				<div className={"cart-details"}>
 					<h1>Your cart:</h1>
@@ -79,10 +81,7 @@ class Cart extends Component {
 													</Link>
 												</div>
 											</div>
-											<button className="" onClick={() => {
-												this.handleRemove(item.id)
-											}}>Remove
-											</button>
+											<Button variant="warning" onClick={() => {this.handleRemove(item.id)}}>Remove</Button>
 										</div>
 									</div>
 							);
@@ -90,12 +89,12 @@ class Cart extends Component {
 					</div>
 					<div className={"cart-summary"}>
 						<div className={"cart-summary-total"}>TOTAL: {this.props.totalPrice}$</div>
-						<button onClick={() => this.handlePay()}>Pay</button>
+						<Button variant="success" onClick={() => this.handlePay()} size="lg">Pay</Button>
 					</div>
 				</div>
 		) : (
 				<div className={'empty-basket-details'}>
-					<div className={"empty-basket"}/>
+					<div className={"pizza-logo"}/>
 					<h2>Your cart is empty</h2>
 					<p>Looks like you haven't added anything to your cart yet</p>
 				</div>
@@ -103,13 +102,7 @@ class Cart extends Component {
 
 		return (
 				<div className={"cart-container"}>
-					{this.props.payment ? (
-							<p>sss</p>
-					) : (
-							<div>
-								{addedItems}
-							</div>
-					)}
+					{addedItems}
 				</div>
 		);
 	}
@@ -120,12 +113,11 @@ function roundNumber(number) {
 	return parseFloat(newnumber);
 }
 
-
 const mapStateToProps = (state) => {
 	return {
 		items: state.addedItems,
 		totalPrice: roundNumber(state.total),
-		payment: false,
+		showSpinner: state.shouldShowSpinner
 	};
 };
 
@@ -139,6 +131,9 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		subtractQuantity: (id) => {
 			dispatch(subtractQuantity(id))
+		},
+		showSpinner: (shouldShowSpinner) => {
+			dispatch(showSpinner(shouldShowSpinner))
 		}
 	}
 };

@@ -1,4 +1,4 @@
-.navbar {
+.custom-navbar {
   width: 100%;
   position: absolute;
   display: flex;
@@ -76,3 +76,13 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .logo {
+    display: none;
+  }
+
+  .header-info {
+    display: none;
+  }
+
+}

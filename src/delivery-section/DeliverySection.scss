@@ -18,3 +18,10 @@
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 500px) {
+  .pizza-maker{
+    width: 50%;
+    height: 50%;
+  }
+}

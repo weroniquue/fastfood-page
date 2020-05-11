@@ -5,7 +5,7 @@
   padding: 0 20px;
 }
 
-.empty-basket {
+.pizza-logo {
   background: url("/pizza-icon.png") no-repeat center;
   width: 135px;
   height: 135px;
@@ -51,6 +51,7 @@
   .cart-summary-total {
     font-size: 32px;
     color: #a80e0e;
+    padding: 10px 0;
   }
 
   .item-desc {
@@ -63,4 +64,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .cart-details {
+    .collection-item {
+      flex-direction: column;
+
+      .item-desc {
+        padding: 0;
+      }
+    }
+
+    .collection-item-img{
+      max-width: 100%;
+    }
+
+    .cart-summary {
+      margin: 0;
+    }
+  }
 }

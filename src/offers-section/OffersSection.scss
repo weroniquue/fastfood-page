@@ -16,3 +16,10 @@
     @include h1-with-decoration;
   }
 }
+
+@media only screen and (max-width: 500px) {
+ .food-tiles {
+   flex-direction: column;
+   align-items: center;
+ }
+}

@@ -1,4 +1,4 @@
-import {ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, ADD_SŁHIPPING} from './actionTypes'
+import {ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, ADD_SŁHIPPING, SHOW_SPINNER} from './actionTypes'
 
 export const addToCart = (id) => {
 	return {
@@ -25,5 +25,12 @@ export const addQuantity = (id) => {
 	return {
 		type: ADD_QUANTITY,
 		id
+	}
+};
+
+export const showSpinner = (showSpinner) => {
+	return {
+		type: SHOW_SPINNER,
+		showSpinner
 	}
 };
