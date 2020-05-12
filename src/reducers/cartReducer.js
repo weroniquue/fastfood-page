@@ -1,4 +1,4 @@
-import {ADD_QUANTITY, ADD_TO_CART, REMOVE_ITEM, SHOW_SPINNER, SUB_QUANTITY} from "../acrions/actionTypes";
+import {ADD_QUANTITY, ADD_TO_CART, NEXT_STEP, REMOVE_ITEM, SHOW_SPINNER, SUB_QUANTITY} from "../acrions/actionTypes";
 
 const initState = {
 	menuItems: [
@@ -46,7 +46,8 @@ const initState = {
 		}
 	],
 	addedItems:[],
-	total: 0
+	total: 0,
+	step: 1
 
 };
 
@@ -73,7 +74,6 @@ const cartReducer= (state = initState, action)=>{
 		{
 			addedItem.quantity += 1;
 			showTotalInCart(state.addedItems);
-			console.log(typeof state.total + addedItem.price);
 			return{
 				...state,
 				total: state.total + addedItem.price
@@ -131,6 +131,15 @@ const cartReducer= (state = initState, action)=>{
 			shouldShowSpinner : action.showSpinner
 		}
 	}
+
+	if (action.type === NEXT_STEP) {
+		console.log('step');
+		return {
+				...state,
+			step: action.step
+		}
+	}
+
 	return state
 };
 export default cartReducer;

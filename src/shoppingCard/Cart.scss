@@ -5,6 +5,29 @@
   padding: 0 20px;
 }
 
+.spinner {
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.personal-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.react-spinner {
+  width: 5em;
+  height: 5em;
+}
+
 .pizza-logo {
   background: url("/pizza-icon.png") no-repeat center;
   width: 135px;
@@ -40,23 +63,22 @@
     }
   }
 
-  .cart-summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #a80e0e;
-    margin: 0 35px;
-  }
-
-  .cart-summary-total {
-    font-size: 32px;
-    color: #a80e0e;
-    padding: 10px 0;
-  }
-
   .item-desc {
     padding: 0 20px;
   }
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #a80e0e;
+}
+
+.cart-summary-total {
+  font-size: 32px;
+  color: #a80e0e;
+  padding: 10px 0;
 }
 
 .empty-basket-details {

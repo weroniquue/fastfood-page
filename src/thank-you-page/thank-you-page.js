@@ -5,7 +5,6 @@ import queryString from 'query-string';
 class ThankYouPage extends React.Component {
 
 	render() {
-		console.log();
 		return (
 				<div className={'thank-you'}>
 					<div className={"pizza-logo"}/>
@@ -13,7 +12,7 @@ class ThankYouPage extends React.Component {
 							? (
 									<div>
 										<h2>Ups! Something went wrong</h2>
-										<p>Please contact with up!</p>
+										<p>Please contact with us!</p>
 									</div>
 							)
 							: (

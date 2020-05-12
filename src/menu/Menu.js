@@ -1,8 +1,15 @@
 import React from 'react';
 import './Menu.scss';
 import {Link} from 'react-router-dom';
+import {goToStep} from "../acrions/cartActions";
+import {connect, mapDispatchToProps} from "react-redux";
 
 class Menu extends React.Component {
+
+	constructor(props) {
+		super(props);
+		this.setStep = this.setStep.bind(this);
+	}
 	render() {
 		return (
 				<div className={'custom-navbar'}>
@@ -14,14 +21,25 @@ class Menu extends React.Component {
 							<Link to="/menu">Menu</Link>
 						</div>
 						<div className={'navbar-actions'}>
-							<div className={'basket-icon'}>	<Link to="/cart"/></div>
+							<div className={'basket-icon'}><Link to="/cart" onClick={this.setStep}/></div>
 							<div className={'basket-total'} id={'total-basket'}/>
 						</div>
 					</div>
 				</div>
-	)
-		;
+		)
+				;
+	}
+
+	setStep() {
+		this.props.goToStep(1);
 	}
 }
 
-export default Menu;
+const mapStateToProps = (dispatch) => {
+	return {
+		goToStep: (step) => {
+			dispatch(goToStep(step));
+		}
+	}
+};
+export default connect(null, mapStateToProps)(Menu);
