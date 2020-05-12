@@ -133,7 +133,6 @@ const cartReducer= (state = initState, action)=>{
 	}
 
 	if (action.type === NEXT_STEP) {
-		console.log('step');
 		return {
 				...state,
 			step: action.step
